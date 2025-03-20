@@ -1,0 +1,7 @@
+.lalala {
+  position: relative;
+  z-index: 2;
+  background-color: #e0e0e0;
+  padding: 20px;
+  transform: translateY(-500px); /* Сдвигаем блок2 на 20px вверх */
+}

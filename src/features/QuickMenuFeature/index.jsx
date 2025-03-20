@@ -1,0 +1,33 @@
+import Card from '../../shared/ui/Card';
+
+const quickMenuItems = [
+  { name: 'Andini Salinsa', account: '3570 0924 ****', avatar: '/images/avatars/andini.png' },
+  { name: 'Rosa Azkiwu', account: '3570 0924 ****', avatar: 'images/avatars/roza.png' },
+  { name: 'Dini Dana', account: '3570 0924 ****', avatar: 'images/avatars/dini.png' },
+  { name: 'Ojan Gorkis', account: '3570 0924 ****', avatar: 'images/avatars/ojan.png' },
+];
+
+const QuickMenuFeature = () => {
+  return (
+    <Card className="bg-white">
+      <h2 className="text-lg -mt-3 font-semibold text-black">Quick Menu</h2>
+      <p className="text-sm w-3/5  text-gray-400 mb-4">Quick Transfer or Receive to your friends</p>
+      <div className="w-full py-2 -mt-2 mb-4 font-semibold text-center cursor-pointer text-gray-400 border border-dashed border-gray-300 rounded-lg text-sm hover:bg-gray-100">
+        Add people to transfer
+      </div>
+      <ul className="space-y-3">
+        {quickMenuItems.map((item, index) => (
+          <li key={index} className="flex items-center space-x-3">
+            <img src={item.avatar} alt={item.name} className="w-10 h-10 rounded-full" />
+            <div>
+              <p className="text-sm font-medium text-black">{item.name}</p>
+              <p className="text-xs text-gray-500">{item.account}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+};
+
+export default QuickMenuFeature;
