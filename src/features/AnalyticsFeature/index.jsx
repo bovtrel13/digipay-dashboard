@@ -1,4 +1,3 @@
-// AnalyticsFeature.jsx
 import { useState, useEffect, useRef } from 'react';
 import Card from '../../shared/ui/Card';
 import { PieChart, Pie, Cell, Legend } from 'recharts';
@@ -14,7 +13,6 @@ const data = [
 
 const COLORS = ['#EBEEFF', '#D7DDFE', '#BBC6FB', '#92A3F6', '#778AED', '#566CD9'];
 
-// Кастомный рендеринг легенды
 const renderCustomLegend = (props) => {
   const { payload } = props;
 

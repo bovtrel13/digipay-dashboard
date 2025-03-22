@@ -5,7 +5,6 @@ const DebitCardFeature = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // Закрытие меню при клике вне области
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -21,7 +20,6 @@ const DebitCardFeature = () => {
 
   return (
     <Card className="relative">
-      {/* Заголовок и иконка меню */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold text-black">Debit Card</h2>
         <div
@@ -45,24 +43,30 @@ const DebitCardFeature = () => {
         </div>
       </div>
 
-      {/* Карточка */}
-      <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg px-6 pt-6">
+      <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg px-6 pt-6 ">
         {/* Логотип (два круга) */}
-        <div className="flex space-x-2 mb-6">
+        <div className="flex space-x-2 mb-13">
           <div className="w-8 h-8 bg-blue-300 opacity-50 rounded-full"></div>
           <div className="w-8 h-8 bg-blue-200 opacity-50 rounded-full -ml-4"></div>
         </div>
 
-        {/* Номер карты */}
-        <p className={`text-xl font-normal tracking-wider ${window.innerWidth < 768 ? 'text-lg' : ''}`}>
+        <p
+            className={`font-normal tracking-wider ${window.innerWidth < 768 ? 'text-lg' : ''}`}
+            style={{fontFamily: 'SF Pro Display, sans-serif', letterSpacing: '4%', fontSize: '20px', color: '#fefefe'}}
+        >
           3455 4562 7710 3507
         </p>
 
-        {/* Дата, имя и чип */}
-        <div className="bg-black flex justify-between items-center mt-4 -mx-6 h-20 rounded-b-lg px-6">
-          <div className="flex flex-col gap-1">
-            <p className="text-sm font-normal">02/30</p>
-            <p className="text-sm font-normal">JOHN CARTER</p>
+        <div className="bg-black flex justify-between items-center mt-3  -mx-6 h-15 rounded-b-lg px-6">
+          <div className="flex flex-col gap-0">
+            <p
+                className="font-normal"
+                style={{fontFamily: 'SF Pro Display, sans-serif', letterSpacing: '4%', fontSize: '14px'}}
+            >02/30</p>
+            <p
+                className="text-sm"
+                style={{fontFamily: 'SF Pro Display, sans-serif', letterSpacing: '4%'}}
+            >JOHN CARTER</p>
           </div>
           <img
             src="images/Chip.svg"
@@ -72,7 +76,6 @@ const DebitCardFeature = () => {
         </div>
       </div>
 
-      {/* Прогресс-бар и лимит */}
       <div className="mt-4">
         <div className='flex items-center justify-between'>
           <p className="text-sm font-semibold text-black">Debit Card payment limit</p>
@@ -83,7 +86,6 @@ const DebitCardFeature = () => {
         </div>
       </div>
 
-      {/* Выпадающее меню */}
       {isMenuOpen && (
         <div
           ref={menuRef}

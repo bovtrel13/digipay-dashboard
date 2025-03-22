@@ -1,4 +1,3 @@
-// ExpensensFeature.jsx
 import { useState, useEffect, useRef } from 'react';
 import Card from '../../shared/ui/Card';
 
@@ -6,7 +5,6 @@ const ExpensensFeature = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // Закрытие меню при клике вне области
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -14,10 +12,8 @@ const ExpensensFeature = () => {
       }
     };
 
-    // Добавляем слушатель события на документ
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Убираем слушатель при размонтировании компонента
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -26,7 +22,9 @@ const ExpensensFeature = () => {
   return (
     <Card className="relative bg-stone-900 py-6">
       <div className="flex justify-between items-center mb-3">
-        <h2 className="text-lg font-semibold text-white">Expenses</h2>
+        <h2 className="text-white text-xl"
+            style={{fontWeight: '550', letterSpacing: '.5px'}}
+        >Expenses</h2>
         <div
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-gray-500 hover:text-gray-700 focus:outline-none cursor-pointer"
@@ -48,11 +46,15 @@ const ExpensensFeature = () => {
         </div>
       </div>
 
-      {/* Основное содержимое */}
-      <p className="text-3xl mb-3 font-bold text-white">$6,254</p>
-      <p className="text-sm text-red-500">-$18.28 than last month</p>
+      <p
+          className="text-4xl mb-3 text-white"
+          style={{fontWeight: '500', letterSpacing: '1px'}}
+      >$6,254</p>
+      <p
+          className="text-sm text-red-500"
+          style={{fontWeight: '500', letterSpacing: '.5px'}}
+      >- $ 18,28 than last month</p>
 
-      {/* Выпадающее меню */}
       {isMenuOpen && (
         <div
           ref={menuRef}

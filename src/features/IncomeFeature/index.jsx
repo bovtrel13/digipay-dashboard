@@ -5,7 +5,7 @@ const IncomeFeature = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // Закрытие меню при клике вне области
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -13,19 +13,20 @@ const IncomeFeature = () => {
       }
     };
 
-    // Добавляем слушатель события на документ
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Убираем слушатель при размонтировании компонента
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
   return (
-    <Card className="relative mb-5 py-10">
+    <Card className="relative mb-5 py-8">
       <div className="flex justify-between items-center mb-3">
-        <h2 className="text-black text-xl font-semibold">Income</h2>
+        <h2
+            className="text-black text-xl"
+            style={{fontWeight: '550', letterSpacing: '.5px'}}
+        >Income</h2>
         <div
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-gray-500 hover:text-gray-700 focus:outline-none cursor-pointer"
@@ -47,11 +48,15 @@ const IncomeFeature = () => {
         </div>
       </div>
 
-      {/* Основное содержимое */}
-      <p className="text-3xl font-semibold mb-3 text-black">$36,254</p>
-      <p className="text-sm text-green-500">+ $238.28 than last month</p>
+      <p
+          className="text-4xl mb-3 text-black"
+          style={{fontWeight: '500', letterSpacing: '1px'}}
+      >$36,254</p>
+      <p
+          className="text-sm text-green-500"
+          style={{fontWeight: '500', letterSpacing: '.5px'}}
+      >+ $ 238.28 than last month</p>
 
-      {/* Выпадающее меню */}
       {isMenuOpen && (
         <div
           ref={menuRef}
