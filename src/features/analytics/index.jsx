@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Card from '../../shared/ui/Card';
+import Card from '../../shared/ui/card';
 import { PieChart, Pie, Cell, Legend } from 'recharts';
 
 const data = [
@@ -31,7 +31,7 @@ const renderCustomLegend = (props) => {
   );
 };
 
-const AnalyticsFeature = () => {
+const Analytics = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -65,4 +65,4 @@ const AnalyticsFeature = () => {
   );
 };
 
-export default AnalyticsFeature;
+export default Analytics;

@@ -1,9 +1,10 @@
-import DashboardPage from '../pages/DashboardPage';
+import Dashboard from "../pages/dashboard/index.jsx";
+import './App.css'
 
 const App = () => {
   return (
     <div>
-      <DashboardPage />
+      <Dashboard />
     </div>
   );
 };

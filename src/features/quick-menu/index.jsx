@@ -1,4 +1,4 @@
-import Card from '../../shared/ui/Card';
+import Card from '../../shared/ui/card';
 
 const quickMenuItems = [
   { name: 'Andini Salinsa', account: '3570 0924 ****', avatar: '/images/avatars/andini.png' },
@@ -7,7 +7,7 @@ const quickMenuItems = [
   { name: 'Ojan Gorkis', account: '3570 0924 ****', avatar: 'images/avatars/ojan.png' },
 ];
 
-const QuickMenuFeature = () => {
+const QuickMenu = () => {
   return (
     <Card className="bg-white">
       <h2 className="text-lg -mt-3 font-semibold text-black">Quick Menu</h2>
@@ -30,4 +30,4 @@ const QuickMenuFeature = () => {
   );
 };
 
-export default QuickMenuFeature;
+export default QuickMenu;

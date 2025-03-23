@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import CurrencySlider from '../../shared/ui/CurrencySlider';
+import CurrencySlider from '../../shared/ui/currency-slider';
 
 const Header = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);

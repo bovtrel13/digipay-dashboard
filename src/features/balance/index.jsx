@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Card from '../../shared/ui/Card';
+import Card from '../../shared/ui/card';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 const data = [
@@ -12,7 +12,7 @@ const data = [
   { day: 'Sun', balance: 95 },
 ];
 
-const BalanceFeature = () => {
+const Balance = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -126,4 +126,4 @@ const BalanceFeature = () => {
   );
 };
 
-export default BalanceFeature;
+export default Balance;

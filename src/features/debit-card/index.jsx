@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import Card from '../../shared/ui/Card';
+import Card from '../../shared/ui/card';
 
-const DebitCardFeature = () => {
+const DebitCard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -103,4 +103,4 @@ const DebitCardFeature = () => {
   );
 };
 
-export default DebitCardFeature;
+export default DebitCard;

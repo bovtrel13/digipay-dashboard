@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Card from '../../shared/ui/Card';
+import Card from '../../shared/ui/card';
 
 const transactions = [
   { name: 'Dribbble Subscription', category: 'Dribbble Pro Business Subscription', type: 'Freelance', amount: '-$200.00', icon: '/images/icons/dribble.svg' },
@@ -9,7 +9,7 @@ const transactions = [
   { name: 'Freelance with SabuanTeam', category: 'Freelance UI Design Websites', type: 'Freelance', amount: '+$1,500.00', icon: '/images/icons/freelance.svg' },
 ];
 
-const RecentTransactionsFeature = () => {
+const RecentTransactions  = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -113,4 +113,4 @@ const RecentTransactionsFeature = () => {
   );
 };
 
-export default RecentTransactionsFeature;
+export default RecentTransactions;
