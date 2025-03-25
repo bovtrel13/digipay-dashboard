@@ -44,14 +44,13 @@ const DebitCard = () => {
       </div>
 
       <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg px-6 pt-6 ">
-        {/* Логотип (два круга) */}
         <div className="flex space-x-2 mb-13">
           <div className="w-8 h-8 bg-blue-300 opacity-50 rounded-full"></div>
           <div className="w-8 h-8 bg-blue-200 opacity-50 rounded-full -ml-4"></div>
         </div>
 
         <p
-            className={`font-normal tracking-wider ${window.innerWidth < 768 ? 'text-lg' : ''}`}
+            className={`font-normal flex tracking-wider ${window.innerWidth < 768 ? 'text-lg' : ''}`}
             style={{fontFamily: 'SF Pro Display, sans-serif', letterSpacing: '4%', fontSize: '20px', color: '#fefefe'}}
         >
           3455 4562 7710 3507

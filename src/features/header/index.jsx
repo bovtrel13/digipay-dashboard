@@ -26,12 +26,11 @@ const Header = () => {
 
   return (
       <header
-          className={`bg-black text-white bg-opacity-80 fixed top-0 left-0 p-4 h-20 md:h-70 -mx-4 relative z-0 backdrop-blur-sm transition-all duration-300 ${
+          className={`bg-black text-white bg-opacity-80 fixed max-w-320 top-0 left-0.4 2xl:left-4 p-4 h-20 md:h-70 -mx-4 relative z-0 backdrop-blur-sm transition-all duration-300 ${
               isMenuOpen ? 'w-screen h-120' : 'w-screen md:w-screen w-[44px]'
           }`}
       >
         <div className="flex flex-col gap-3 justify-between items-center max-w-screen-xl mx-auto mb-30">
-          {/* Бургер-меню для мобильных */}
           <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -41,7 +40,6 @@ const Header = () => {
             </svg>
           </button>
 
-          {/* Навигационное меню */}
           <nav
               className={`md:flex md:ml-30 gap-5 space-x-5 text-center justify-center items-center ${
                   isMenuOpen ? 'block' : 'hidden'
@@ -157,7 +155,6 @@ const Header = () => {
               Help
             </a>
 
-            {/* Профиль пользователя */}
             <div className="relative">
               <button
                   data-profile-button
@@ -201,7 +198,6 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Replace static currency display with the slider */}
           <div className="hidden md:block -ml-10">
             <CurrencySlider />
           </div>

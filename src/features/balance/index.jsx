@@ -99,7 +99,7 @@ const Balance = () => {
             </svg>
           </button>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 flex justify-center">
           <LineChart width={300} height={190} data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="day" />
